@@ -52,8 +52,8 @@ O projeto gera automaticamente um mapa interativo completo:
 
 Clone o repositório e instale as dependências recomendadas (`geopandas`, `libpysal`, `esda`, `mgwr`, `spreg`, `folium`):
 
-git clone [https://github.com/eniocancian/sp-water-energy-spatial-nexus.git](https://github.com/eniocancian/sp-water-energy-spatial-nexus.git)
-cd sp-water-energy-spatial-nexus
+git clone [[https://github.com/eniocancian/sp-water-energy-spatial-nexus.git](https://github.com/eniocancian/sp-water-energy-spatial-nexus.git)
+cd sp-water-energy-spatial-nexus](https://github.com/eniocancian/sp-water-energy-spatial-nexus/)
 
 👤 Autor
 Ênio Fernando Cancian Júnior
