@@ -1,0 +1,5 @@
+Método de Validação,RMSE (kWh/m³),MAE (kWh/m³),R²
+OLS Clássico (In-Sample Treino),0.065,0.0524,0.6615
+GWR Local (In-Sample Treino),0.0575,0.0466,0.7349
+OLS - Spatial Block 5-Fold CV (Out-of-Sample),0.069,0.0556,0.6185
+GWR - Spatial Block 5-Fold CV (Out-of-Sample),0.07,0.0571,0.6068

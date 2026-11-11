@@ -1,0 +1,10 @@
+﻿numpy
+pandas
+geopandas
+geobr
+libpysal
+esda
+spreg
+mapclassify
+matplotlib
+seaborn

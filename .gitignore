@@ -1,0 +1,6 @@
+﻿__pycache__/
+*.py[cod]
+.spyproject/
+.ipynb_checkpoints/
+.env
+*.tmp

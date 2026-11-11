@@ -1,0 +1,6 @@
+Indicador / Relação,Moran_I,Z_Score,p_value_sim
+Consumo Específico Energia (kWh/m³),0.4757,19.9463,0.001
+Perdas na Distribuição de Água (%),0.5382,22.2347,0.001
+Índice de Vulnerabilidade Hídrica (IVH),0.7213,28.4429,0.001
+Geração Distribuída Solar (kWp/1k hab),0.7151,29.6775,0.001
+Bivariado: Perdas Água (X) -> Energia Vizinhos (Wy),0.3506,11.0149,0.001

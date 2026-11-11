@@ -1,0 +1,4 @@
+Modelo,R2_ou_PseudoR2,Log_Likelihood,AIC (Menor = Melhor),Param_Espacial (rho/lambda),Moran_I_Residuos,p_value_Residuos
+1. OLS Clássico (Não-Espacial),0.6615,848.0643,-1684.1287,0.0,0.2888,0.001
+2. Spatial Lag - SAR (ML_Lag),0.7165,898.0409,-1782.0818,0.3395,0.127,0.001
+3. Spatial Error - SEM (ML_Error),0.6596,914.5875,-1817.1749,0.614,0.0147,0.246
