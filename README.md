@@ -1,9 +1,9 @@
 # 💧⚡ Spatial Analysis of the Water-Energy Nexus in São Paulo
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
-[![Geopandas](https://img.shields.io/badge/Geospatial-GeoPandas%20%2F%20PySal-green.svg)](https://geopandas.org/)
-[![Econometrics](https://img.shields.io/badge/Econometrics-SAR%20%2F%20SEM%20%2F%20GWR-orange.svg)](https://pysal.org/)
-[![Interactive Map](https://img.shields.io/badge/Dashboard-Folium%20%2F%20Leaflet-red.svg)](https://python-visualization.github.io/folium/)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)  
+[![Geopandas](https://img.shields.io/badge/Geospatial-GeoPandas%20%2F%20PySal-green.svg)](https://geopandas.org/)  
+[![Econometrics](https://img.shields.io/badge/Econometrics-SAR%20%2F%20SEM%20%2F%20GWR-orange.svg)](https://pysal.org/)  
+[![Interactive Map](https://img.shields.io/badge/Dashboard-Folium%20%2F%20Leaflet-red.svg)](https://python-visualization.github.io/folium/)  
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
@@ -24,7 +24,7 @@ O repositório é modularizado em 5 scripts sequenciais:
 | :--- | :--- | :--- |
 | **01** | `01_geracao_datasets.py` | Geração, limpeza e consolidação da base de dados vetorial e tabular municipal. |
 | **02** | `02_esda_moran_lisa.py` | Matriz de ponderação espacial (K-NN/Queen), Moran Global e LISA (*Hotspots* / *Coldspots*). |
-| **03** | `03_modelos_econometricos_sar_sem.py` | Estimação de modelos espaciais globais (**SAR** - *Spatial Lag* e **SEM** - *Spatial Error*). |
+| **03** | `03_modelos_econometricos_sar_sem.py` | Estimação de modelos espaciais globais (**SAR** - *Spatial Lag* e **SEM* - *Spatial Error*). |
 | **04** | `04_gwr_validacao_cruzada.py` | Calibração de **GWR** e Validação Cruzada Espacial em Blocos (*Spatial Block 5-Fold CV*). |
 | **05** | `05_mapas_interativos_web_folium.py` | Exportação de dashboard interativo em HTML utilizando tiles da *Esri World Street Map*. |
 
@@ -56,8 +56,6 @@ Clone o repositório e instale as dependências recomendadas (`geopandas`, `libp
 ```bash
 git clone [https://github.com/eniocancian/sp-water-energy-spatial-nexus.git](https://github.com/eniocancian/sp-water-energy-spatial-nexus.git)
 cd sp-water-energy-spatial-nexus
-
-Execute os scripts em ordem sequencial de 01 a 05 para rodar o pipeline completo.
 
 👤 Autor
 Ênio Fernando Cancian Júnior
