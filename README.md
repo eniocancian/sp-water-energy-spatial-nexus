@@ -54,5 +54,9 @@ Clone o repositório e instale as dependências recomendadas (`geopandas`, `libp
 
 https://github.com/eniocancian/sp-water-energy-spatial-nexus/
 
-👤 Autor
-Ênio Fernando Cancian Júnior
+---
+
+## 👤 Autor
+
+**Ênio Fernando Cancian Júnior**  
+[LinkedIn](https://linkedin.com/in/eniocancian) | [GitHub](https://github.com/eniocancian)
