@@ -1,50 +1,65 @@
-# Análise Espacial do Nexo Água-Energia no Estado de São Paulo
+# 💧⚡ Spatial Analysis of the Water-Energy Nexus in São Paulo
 
-Repositório analítico desenvolvido para modelagem econométrica espacial, exploração estatística de dados espaciais (ESDA), modelagem espacial avançada (SAR/SEM), regressão geograficamente ponderada (GWR) com validação cruzada espacial e visualização cartográfica interativa aplicada aos municípios do Estado de São Paulo.
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
+[![Geopandas](https://img.shields.io/badge/Geospatial-GeoPandas%20%2F%20PySal-green.svg)](https://geopandas.org/)
+[![Econometrics](https://img.shields.io/badge/Econometrics-SAR%20%2F%20SEM%20%2F%20GWR-orange.svg)](https://pysal.org/)
+[![Interactive Map](https://img.shields.io/badge/Dashboard-Folium%20%2F%20Leaflet-red.svg)](https://python-visualization.github.io/folium/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
 
-## 📋 Visão Geral do Projeto
-Este projeto investiga o **Nexo Água-Energia**, mapeando a relação crítica entre as **perdas físicas de água (%)** nas redes de distribuição e o **consumo específico de energia elétrica (kWh/m³)** associado aos sistemas de saneamento básico e bombeamento municipal.
+## 📌 Visão Geral do Projeto
 
-Utilizando o ecossistema Python em geoprocessamento e econometria espacial, o pipeline integra bases de dados geográficas municipais e executa modelagens avançadas para capturar dependências espaciais e heterogeneidades regionais.
+Este repositório apresenta uma pipeline analítica avançada de **Econometria Espacial e Geoprocessamento** aplicada ao **Nexo Água-Energia** nos municípios do Estado de São Paulo. O projeto investiga a relação espacial crítica entre as **perdas físicas de água nas redes de distribuição (%)** e o **consumo específico de energia elétrica (kWh/m³)** associado ao saneamento e bombeamento municipal.
+
+O projeto integra técnicas modernas de Análise Exploratória de Dados Espaciais (ESDA), modelagem espacial global (**SAR/SEM**), regressão geograficamente ponderada (**GWR**) com validação cruzada espacial rigorosa (*Spatial Block CV*), e um **dashboard interativo web** em Folium.
 
 ---
 
 ## 🛠️ Arquitetura do Pipeline Analítico
-O repositório é estruturado em um fluxo modular progressivo de 5 etapas:
 
-1. **`01_geracao_datasets.py`**: Geração e consolidação da base de dados tabular e geoespacial dos municípios paulistas.
-2. **`02_esda_moran_lisa.py`**: Análise Exploratória de Dados Espaciais (ESDA), cálculo da matriz de ponderação espacial (K-NN/Queen) e índices de Moran Global e Local (LISA - *Hotspots* e *Coldspots*).
-3. **`03_modelos_econometricos_sar_sem.py`**: Estimação de modelos econométricos espaciais globais (**SAR** - *Spatial Lag* e **SEM** - *Spatial Error*) para controle de autocorrelação espacial.
-4. **`04_gwr_validacao_cruzada.py`**: Calibração de **Geographically Weighted Regression (GWR)** e Validação Cruzada Espacial em Blocos (*Spatial Block 5-Fold CV*) para avaliação robusta de out-of-sample.
-5. **`05_mapas_interativos_web_folium.py`**: Construção de dashboard cartográfico interativo baseado em **Folium / Leaflet**, utilizando tiles do *Esri World Street Map* e renderização dos clusters LISA e coeficientes GWR locais.
+O repositório é modularizado em 5 scripts sequenciais:
 
----
-
-## 📊 Principais Resultados Econométricos
-
-* **Comparativo de Desempenho (Validação Cruzada Espacial):**
-  * **OLS Clássico (In-Sample):** $R^2 = 0.6615$ | $\text{RMSE} = 0.0650$
-  * **GWR Local (In-Sample):** $R^2 = 0.7349$ | $\text{RMSE} = 0.0575$
-  * **OLS - Spatial Block 5-Fold CV (Out-of-Sample):** $R^2 = 0.6185$ | $\text{RMSE} = 0.0690$
-  * **GWR - Spatial Block 5-Fold CV (Out-of-Sample):** $R^2 = 0.6068$ | $\text{RMSE} = 0.0700$
+| Etapa | Script | Descrição Técnica |
+| :--- | :--- | :--- |
+| **01** | `01_geracao_datasets.py` | Geração, limpeza e consolidação da base de dados vetorial e tabular municipal. |
+| **02** | `02_esda_moran_lisa.py` | Matriz de ponderação espacial (K-NN/Queen), Moran Global e LISA (*Hotspots* / *Coldspots*). |
+| **03** | `03_modelos_econometricos_sar_sem.py` | Estimação de modelos espaciais globais (**SAR** - *Spatial Lag* e **SEM** - *Spatial Error*). |
+| **04** | `04_gwr_validacao_cruzada.py` | Calibração de **GWR** e Validação Cruzada Espacial em Blocos (*Spatial Block 5-Fold CV*). |
+| **05** | `05_mapas_interativos_web_folium.py` | Exportação de dashboard interativo em HTML utilizando tiles da *Esri World Street Map*. |
 
 ---
 
-## 🌐 Visualização Interativa Web (`outputs/`)
-O repositório inclui um dashboard interativo completo salvo em formato HTML na pasta `outputs/`:
+## 📊 Desempenho dos Modelos e Validação Cruzada
+
+Resultados comparativos de desempenho preditivo (*In-Sample* vs *Out-of-Sample* via Spatial Block CV):
+
+| Método / Modelo | R² (In-Sample) | RMSE (In-Sample) | R² (Spatial Block CV) | RMSE (Spatial Block CV) |
+| :--- | :---: | :---: | :---: | :---: |
+| **OLS Clássico** | 0.6615 | 0.0650 | 0.6185 | 0.0690 |
+| **GWR Local** | **0.7349** | **0.0575** | 0.6068 | 0.0700 |
+
+---
+
+## 🌐 Dashboard Interativo (`outputs/`)
+
+O projeto gera automaticamente um mapa interativo completo:
 * **Arquivo:** `outputs/mapa_interativo_water_energy_sp.html`
-* **Recursos:** Camadas dinâmicas selecionáveis (Clusters LISA de Autorrelação Espacial e Parâmetros Locais GWR), *tooltips* interativos com dados municipais detalhados e mapa base de alta resolução (*Esri World Street Map*).
+* **Destaques:** Camadas dinâmicas selecionáveis para os Clusters LISA e Parâmetros Locais da GWR, tooltips com indicadores municipais e mapa base de alta resolução (*Esri World Street Map*).
 
 ---
 
 ## 🚀 Como Executar o Projeto
 
-1. Clone o repositório e certifique-se de utilizar um ambiente Python (como Anaconda/Spyder) com as bibliotecas exigidas (`geopandas`, `libpysal`, `esda`, `mgwr`, `spreg`, `folium`, `pandas`, `numpy`):
+Clone o repositório e instale as dependências recomendadas (`geopandas`, `libpysal`, `esda`, `mgwr`, `spreg`, `folium`):
+
 ```bash
 git clone [https://github.com/eniocancian/sp-water-energy-spatial-nexus.git](https://github.com/eniocancian/sp-water-energy-spatial-nexus.git)
 cd sp-water-energy-spatial-nexus
-```
-2. Execute os scripts em ordem sequencial (de `01` a `05`) para processar os dados, rodar os modelos estatísticos e gerar as saídas cartográficas.
-3. Abra o arquivo `outputs/mapa_interativo_water_energy_sp.html` em qualquer navegador web para interagir com o mapa dinâmico.
+
+Execute os scripts em ordem sequencial de 01 a 05 para rodar o pipeline completo.
+
+👤 Autor
+Ênio Fernando Cancian Júnior
+
+LinkedIn | GitHub
