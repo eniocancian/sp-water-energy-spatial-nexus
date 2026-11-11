@@ -41,6 +41,14 @@ Resultados comparativos de desempenho preditivo (*In-Sample* vs *Out-of-Sample* 
 
 ---
 
+## 📊 Resultados Visuais e Mapas Espaciais
+
+### 1. Clusters LISA (Autocorrelação Espacial Local)
+![Clusters LISA](outputs/lisa_clusters_map.png)
+
+### 2. Variação Espacial dos Coeficientes GWR
+![Coeficientes GWR](outputs/gwr_coefficients_map.png)
+
 ## 🌐 Dashboard Interativo (`outputs/`)
 
 O projeto gera automaticamente um mapa interativo completo:
