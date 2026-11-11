@@ -46,7 +46,6 @@ Resultados comparativos de desempenho preditivo (*In-Sample* vs *Out-of-Sample* 
 O projeto gera automaticamente um mapa interativo completo:
 * **Arquivo:** `outputs/mapa_interativo_water_energy_sp.html`
 * **Destaques:** Camadas dinâmicas selecionáveis para os Clusters LISA e Parâmetros Locais da GWR, tooltips com indicadores municipais e mapa base de alta resolução (*Esri World Street Map*).
-
 ---
 
 ## 🚀 Como Executar o Projeto
@@ -56,8 +55,3 @@ Clone o repositório e instale as dependências recomendadas (`geopandas`, `libp
 ```bash
 git clone [https://github.com/eniocancian/sp-water-energy-spatial-nexus.git](https://github.com/eniocancian/sp-water-energy-spatial-nexus.git)
 cd sp-water-energy-spatial-nexus
-
-👤 Autor
-Ênio Fernando Cancian Júnior
-
-LinkedIn | GitHub
